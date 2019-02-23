@@ -6,12 +6,20 @@
 # Given a list of numbers and a number k, return whether any two numbers from the list add up to k.
 
 def check(lst, k):
-  i = len(lst)
-  for stuff in lst:
-    if(stuff + lst[i-1] == k):
-      i -=1
-      return True
-    else:
-      return False
-      
-print(check([10, 15, 3, 7], 17 ))
+    index = 0
+    lstsize = len(lst)
+    
+    while (index < lstsize):
+        for the_num in lst:
+            if ((the_num + lst[index] == k) and (the_num != lst[index])):
+                return True
+        index += 1
+    
+    return False
+
+print(check([10, 15, 3, 7], 17))
+print(check([1, 5, 6], 11))
+print(check([1, 5, 6, 1], 12))
+print(check([1, 5, 6, 1], 6))
+print(check([1, 5, 6, 2], 7))
+print(check([1, 5, 6, 8], 4))
