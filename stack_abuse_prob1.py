@@ -17,9 +17,16 @@ def check(lst, k):
     
     return False
 
+############## Test Cases ############
 print(check([10, 15, 3, 7], 17))
 print(check([1, 5, 6], 11))
 print(check([1, 5, 6, 1], 12))
 print(check([1, 5, 6, 1], 6))
 print(check([1, 5, 6, 2], 7))
 print(check([1, 5, 6, 8], 4))
+############## Test Cases ############
+
+# Problem extension
+# Bonus: Can you do this in one pass?
+#...
+
