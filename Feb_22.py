@@ -1,15 +1,15 @@
-
+###############################################################################
 # Here's your coding interview problem for today.
 # This problem was recently asked by Google.
 # Given a list of numbers and a number k, return whether any two numbers from the list add up to k.
+###############################################################################
 
-########### Question Credits ########
+########################## Question Credits ###################################
 # founders@dailycodingproblem.com
-#####################################
+###############################################################################
 
 
-
-########### My Solution ########
+################################# My Solution #################################
 
 def check(lst, k):
     index = 0
@@ -23,14 +23,15 @@ def check(lst, k):
     
     return False
 
-############## Test Cases ############
+
+################################## Test Case ##################################
 print(check([10, 15, 3, 7], 17))
 print(check([1, 5, 6], 11))
 print(check([1, 5, 6, 1], 12))
 print(check([1, 5, 6, 1], 6))
 print(check([1, 5, 6, 2], 7))
 print(check([1, 5, 6, 8], 4))
-############## Test Cases ############
+################################## Test Case ##################################
 
 # Problem extension
 # Bonus: Can you do this in one pass?
