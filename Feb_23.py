@@ -14,25 +14,37 @@
 ################################# My Solution #################################
 def product_arrays(lst):
     result = []
-
     products = 1
-    i = 0 
+
+    # multiply every array member divide the product at index i by the excluded index from the initial array 
+    
     for each_num in lst:
         products  *= each_num
-        i += 1
     
-
-    j =0 
+    # int_result = [result.append(int(products/lst[i])) for i in lst]
+    for n in range(len(lst)):
+        try:
+            result.append( int(products/lst[n])) 
+        except ZeroDivisionError:
+            result.append(0)
+            # print("Zero Division Error")   
     
-    while j < len(lst):
-        result.append( products/lst[j])
-        j += 1
-
     return result
 
+
+################################## Test Case ##################################
 print(product_arrays([1, 5, 10]))
+print(product_arrays([1, 2, 3, 4, 5]))
+print(product_arrays([3, 2, 1]))
+print(product_arrays([0, 5, 10])) # FAIL
+print(product_arrays([2, 4, 2]))
+print(product_arrays([10, 20, 30]))
+print(product_arrays([5, 10]))
+print(product_arrays([100,200,300,400]))
+################################## Test Case ##################################
 
 
 # Problem extension
 # Bonus: what if you can't use division?
 #...
+
