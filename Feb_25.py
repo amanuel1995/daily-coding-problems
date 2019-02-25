@@ -18,11 +18,37 @@
 ################################# My Solution #################################
 def missing_number( arry):
     
-    # TODO
-    return 0
+    # smallest positive integer
+    # all positive --> sorted() index 0 -1, if that number is not zero
+    # all negative --> 1
+    # mixed 
+
+    sorted_arry = sorted(arry)
+    smallest_positive = 1000000000000000
+
+    for n in (sorted_arry):
+        if(n < smallest_positive and n > 0):
+            smallest_positive = n
+    
+    while (True):
+        if(smallest_positive - 1 !=0 and smallest_positive-1 not in sorted_arry):
+            smallest_positive -= 1
+            break 
+        elif (smallest_positive -1 == 0):
+            smallest_positive += 1
+            
+        if(smallest_positive in sorted_arry):
+            smallest_positive += 1
+        else:
+            return smallest_positive
+    
+    return smallest_positive 
 
 ################################## Test Case ##################################
-
+print(missing_number([1, 2, 3, 7, 30]))
+print(missing_number([2,0, 5, 10]))
+print(missing_number([122,0, 5, 10]))
+print(missing_number([-1,0, 15, 10]))
 ################################## Test Case ##################################
 
 
