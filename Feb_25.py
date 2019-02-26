@@ -19,39 +19,45 @@
 def missing_number( arry):
     
     # smallest positive integer
-    # all positive --> sorted() index 0 -1, if that number is not zero
+    # all positive --> 1 or smallest
+        # if 1 or smallest is in arry
+        # increment by 1
     # all negative --> 1
-    # mixed 
-
-    sorted_arry = sorted(arry)
-    smallest_positive = 1000000000000000
-
-    for n in (sorted_arry):
-        if(n < smallest_positive and n > 0):
-            smallest_positive = n
     
-    while (True):
-        if(smallest_positive - 1 !=0 and smallest_positive-1 not in sorted_arry):
-            smallest_positive -= 1
-            break 
-        elif (smallest_positive -1 == 0):
-            smallest_positive += 1
-            
-        if(smallest_positive in sorted_arry):
-            smallest_positive += 1
+    if len(arry) != 0:
+        smallest_positive = arry[0]
+        for n in (arry):
+            # get the min {either the smallest in the list or 1}
+            if(n < smallest_positive and n > 0):
+                smallest_positive = n
+            elif (n < 1):
+                smallest_positive = 1
+        if smallest_positive > 1:
+            smallest_positive = 1
         else:
-            return smallest_positive
-    
+            while smallest_positive in arry:
+                smallest_positive += 1
+    else:
+        return 1
+
     return smallest_positive 
 
+
 ################################## Test Case ##################################
-print(missing_number([1, 2, 3, 7, 30]))
-print(missing_number([2,0, 5, 10]))
-print(missing_number([122,0, 5, 10]))
-print(missing_number([-1,0, 15, 10]))
+print(missing_number([ 2, 3, 77, 30]), "Should be 1")
+print(missing_number([1, 2, 3, 7, 30]), "Should be 4")
+print(missing_number([2, 0, 5, 10]), "Should be 1")
+print(missing_number([122, 0, 5, 10]), "Should be 1")
+print(missing_number([-1, 0, 15, 10]), "Should be 1")
+print(missing_number([-3, 4, -1, 1]), "Should be 2")
+print(missing_number([-3, 4, -1, 1, 2, 3, -4]), "Should be 5")
+print(missing_number([-4, 1, 2, 3, 4, 5]), "Should be 6")
+print(missing_number([2]), "Should be 1")
+print(missing_number([]), "Should be 1")
+print(missing_number([1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 13, 15, -1, 11, -2]), "Should be 9")
 ################################## Test Case ##################################
 
 
 # Problem extension
-# Bonus: 
+# Bonus: optimize better for linear time and constant space.
 #...
