@@ -23,10 +23,11 @@ def missing_number( arry):
         # if 1 or smallest is in arry
         # increment by 1
     # all negative --> 1
-    
+    mydict = {}
     if len(arry) != 0:
         smallest_positive = arry[0]
         for n in (arry):
+            mydict[n] = n
             # get the min {either the smallest in the list or 1}
             if(n < smallest_positive and n > 0):
                 smallest_positive = n
@@ -35,7 +36,8 @@ def missing_number( arry):
         if smallest_positive > 1:
             smallest_positive = 1
         else:
-            while smallest_positive in arry:
+
+            while smallest_positive in mydict:
                 smallest_positive += 1
     else:
         return 1
@@ -61,3 +63,9 @@ print(missing_number([1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 13, 15, -1, 11, -2]), "Sho
 # Problem extension
 # Bonus: optimize better for linear time and constant space.
 #...
+
+# Suggested soutions 
+
+# https://stackoverflow.com/questions/25002381/missing-integer-variation-on-solution-needed?noredirect=1&lq=1
+
+#  https://stackoverflow.com/questions/51346136/given-an-array-of-integers-find-the-first-missing-positive-integer-in-linear-ti
