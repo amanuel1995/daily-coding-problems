@@ -27,14 +27,6 @@ public class Solution{
     for (int i =0; i < numbers.length; i++){
       System.out(i);
     }
-    
-  public static main(String[] args){
-    Integer[] array1 = {10,15,3,7};
-    Integer k1 = 17, k2 = 15, k3 = 13, k4 =25, k5 = 100;
-   
-    // ################################## Test Case #1 ##################################
-    Solution.SumFinder(array1, k1);
-  }
 
   }  
 }
