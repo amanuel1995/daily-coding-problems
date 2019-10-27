@@ -20,18 +20,30 @@
 
 
 // ################################# Nehemiah's Solution ################################
+	static boolean addsUpToK(int[] a, int k) {
+		for (int i = 0; i < a.length; i++) {
+			for (int j = 0; j < a.length; j++) {
+				if (a[i] + a[j] == k) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
 
+// inputs
+	int[] a = {10, 15, 3, 7};
 
 // ################################## Test Case #1 ##################################
-
+	addsUpToK(a, 17); // => true
 // ################################## Test Case #2 ##################################
-
+	addsUpToK(a, 0); // => false
 // ################################## Test Case #3 ##################################
-
+	addsUpToK(a, -13); // => false
 // ################################## Test Case #4 ##################################
-
+	addsUpToK(a, 20); // => true
 // ################################## Test Case #5 ##################################
-
+	addsUpToK(a, 10); // => true
 /**
  * Topics to review
  * Loops, Arrays and Array Operations
