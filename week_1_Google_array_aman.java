@@ -19,18 +19,9 @@
  */
 
 
-// ################################# Aman's Solution ################################
-public class Solution{
-  public static void SumFinder(Integer[] numbers, Integer k) {
-    Integer[] numList = numbers;
-    
-    for (int i =0; i < numbers.length; i++){
-      System.out(i);
-    }
+// ################################# Amanuel's Solution #############################
 
-  }  
-}
-
+// ################################## Test Case #1 ##################################
 
 // ################################## Test Case #2 ##################################
 
@@ -41,6 +32,6 @@ public class Solution{
 // ################################## Test Case #5 ##################################
 
 /**
- * Topics to review
- * Loops, Arrays and Array Operations
- */
+* Topics to review
+* Loops, Arrays and Array Operations
+*/
