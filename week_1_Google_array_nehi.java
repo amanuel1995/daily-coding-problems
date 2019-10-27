@@ -23,7 +23,7 @@
 	static boolean addsUpToK(int[] a, int k) {
 		for (int i = 0; i < a.length; i++) {
 			for (int j = 0; j < a.length; j++) {
-				if (a[i] + a[j] == k) {
+				if (a[i] + a[j] == k && i != j) {
 					return true;
 				}
 			}
@@ -41,7 +41,7 @@
 // ################################## Test Case #3 ##################################
 	addsUpToK(a, -13); // => false
 // ################################## Test Case #4 ##################################
-	addsUpToK(a, 20); // => true
+	addsUpToK(a, 20); // => false
 // ################################## Test Case #5 ##################################
 	addsUpToK(a, 10); // => true
 /**
