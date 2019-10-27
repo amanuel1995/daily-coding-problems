@@ -21,11 +21,12 @@
 
 // ################################# Nehemiah's Solution ################################
 	static boolean addsUpToK(int[] a, int k) {
+		HashSet<Integer> hash = new HashSet<Integer>();
 		for (int i = 0; i < a.length; i++) {
-			for (int j = 0; j < a.length; j++) {
-				if (a[i] + a[j] == k && i != j) {
-					return true;
-				}
+			if (hash.contains(k - a[i])) {
+				return true;
+			} else {
+				hash.add(a[i]);
 			}
 		}
 		return false;
