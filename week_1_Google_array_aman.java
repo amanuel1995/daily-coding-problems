@@ -20,9 +20,11 @@ class Main {
       
       // runtime of N squared.
       for (int i =0; i < numbers.length; i++){
-        for (int j=0; j< i; j++){
+        for (int j=0; j< numbers.length; j++){
           if (numbers[i] + numbers[j] == k){
-            flag = true;
+            if (j != i){
+              flag = true;
+            }
           }
         }
       }
@@ -54,19 +56,19 @@ class Main {
       boolean test1 = SumFinder(myArry, k1);
       System.out.println(test1);
       // ################################## Test Case #2 ##################################
-      int k2 = 10;
+      int k2 = 28;
       boolean test2 = SumFinder(myArry, k2);
       System.out.println(test2);
       // ################################## Test Case #3 ##################################
-      int k3 = 13;
+      int k3 = 10;
       boolean test3 = SumFinder(myArry, k3);
       System.out.println(test3);
       // ################################## Test Case #4 ##################################
-      int k4 = 3;
+      int k4 = 6;
       boolean test4 = SumFinder(myArry, k4);
       System.out.println(test4);
       // ################################## Test Case #5 ##################################
-      int k5 = 30;
+      int k5 = 13;
       boolean test5 = SumFinder(myArry, k5);
       System.out.println(test5);
 
