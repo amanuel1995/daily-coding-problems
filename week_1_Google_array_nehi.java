@@ -21,6 +21,7 @@
 
 // ################################# Nehemiah's Solution ################################
 	static boolean addsUpToK(int[] a, int k) {
+		// HashSet data structure gives us a constant time lookup
 		HashSet<Integer> hash = new HashSet<Integer>();
 		for (int i = 0; i < a.length; i++) {
 			if (hash.contains(k - a[i])) {
